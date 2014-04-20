@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.1" replicaid="C1257C49005BE94F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="202" sequence="29" unid="AC3BA2FBF8B257C2C1257C49005F1CEF">
+<created><datetime>20131222T181853,27+01</datetime></created>
+<modified><datetime>20140124T192341,70+01</datetime></modified>
+<revised><datetime>20140123T105856,45+01</datetime></revised>
+<lastaccessed><datetime>20140124T192341,70+01</datetime></lastaccessed>
+<addedtofile><datetime>20131222T181853,28+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
+<wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>com/olb/Link.java</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>com/olb/Link.java</text></item>
+
+
+</note>

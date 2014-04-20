@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:_layout pageTitle="Welcome"
+		pageSubtitle="to Foundation NSF template">
+		<xp:this.facets>
+
+			<xp:div xp:key="leftColumn">
+
+			</xp:div>
+		</xp:this.facets>
+	</xc:_layout>
+</xp:view>

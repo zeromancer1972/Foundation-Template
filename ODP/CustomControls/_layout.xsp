@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript:context.setLocale(Locale.ENGLISH);
+var url = facesContext.getExternalContext().getRequest().getRequestURI();
+if(url.indexOf(".xsp")==-1){
+	if(url.endsWith("/")){
+		url = url.substr(0, url.length-1)
+	}
+	context.redirectToPage(url+view.getPageName())
+}}]]></xp:this.beforePageLoad>
+	<xc:_login></xc:_login>
+	<xc:_navbar></xc:_navbar>
+	<div class="row header-separator">
+		<div class="small-2 large-2 columns leftcol">
+			<xp:callback id="leftColumn" facetName="leftColumn"></xp:callback>
+		</div>
+		<div class="small-10 large-10 columns">
+			<h3>
+				<xp:text disableTheme="true" escape="true" id="computedField1"
+					value="#{javascript:compositeData.pageTitle}">
+				</xp:text>
+				&#160;
+				<small>
+					<xp:text disableTheme="true" escape="true" id="computedField2"
+						value="#{javascript:compositeData.pageSubtitle}">
+					</xp:text>
+				</small>
+			</h3>
+			<xp:callback id="middleColumn" facetName="middleColumn"></xp:callback>
+		</div>
+	</div>
+
+</xp:view>

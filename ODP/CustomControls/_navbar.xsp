@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<div class="fixed">
+		<nav class="top-bar" data-topbar="true">
+			<ul class="title-area">
+				<li class="name">
+					<h1>
+						<a href="#">
+							<xp:text escape="true" id="computedField1" value="#{javascript:@DbTitle()}">
+							</xp:text>
+						</a>
+					</h1>
+				</li>
+
+			</ul>
+
+			<section class="top-bar-section">
+				<!-- Right Nav Section -->
+				<ul class="right">
+					<xp:repeat value="#{javascript:utilities.links}" var="ut">
+						<xp:panel tagName="li" styleClass="#{javascript:ut.getActive(view)}">
+							<xp:link escape="true" text="#{javascript:ut.getLabel()}"
+								id="link2" value="#{javascript:ut.getUrl()}">
+							</xp:link>
+						</xp:panel>
+						<li class="divider"></li>
+					</xp:repeat>
+					<li class="has-dropdown not-click">
+						<a href="#">
+							<xp:text escape="true" id="computedField4">
+								<xp:this.value><![CDATA[#{javascript:@Name("[CN]", @UserName())}]]></xp:this.value>
+							</xp:text>
+						</a>
+						<ul class="dropdown">
+							<xp:panel tagName="li">
+								<xp:this.rendered><![CDATA[#{javascript:!@UserName().equals("Anonymous")}]]></xp:this.rendered>
+								<a href="profile.xsp">My profile</a>
+							</xp:panel>
+							<xp:panel tagName="li">
+								<xp:this.rendered><![CDATA[#{javascript:@ClientType().equals("Web")}]]></xp:this.rendered>
+								<a href="#" onclick="dialogLogin()">
+									<xp:text escape="true" id="computedField5">
+										<xp:this.value><![CDATA[#{javascript:return @UserName().equals("Anonymous")?"Login":"Logout"}]]></xp:this.value>
+									</xp:text>
+								</a>
+							</xp:panel>
+						</ul>
+					</li>
+					<li class="divider"></li>
+					<xp:panel tagName="li" styleClass="has-dropdown not-click">
+						<xp:this.rendered><![CDATA[#{javascript:@IsMember("[Admin]", database.queryAccessRoles(@UserName()))}]]></xp:this.rendered>
+						<a href="#">
+							<xp:text escape="true" id="computedField2">
+								<xp:this.value><![CDATA[#{javascript:"Admin"}]]></xp:this.value>
+							</xp:text>
+						</a>
+						<ul class="dropdown">
+							<li>
+								<a href="settings.xsp">
+									<xp:text escape="true" id="computedField3">
+										<xp:this.value><![CDATA[#{javascript:"Settings"}]]></xp:this.value>
+									</xp:text>
+								</a>
+							</li>
+						</ul>
+					</xp:panel>
+				</ul>
+
+				<!-- Left Nav Section -->
+				<ul class="left">
+					<xp:repeat value="#{javascript:pages.links}" var="link" disableOutputTag="true">
+						<xp:panel tagName="li" styleClass="#{javascript:link.getActive(view)}">
+							<xp:link escape="true" text="#{javascript:link.getLabel()}"
+								id="link1" value="#{javascript:link.getUrl()}">
+							</xp:link>
+						</xp:panel>
+						<li class="divider"></li>
+					</xp:repeat>
+
+				</ul>
+			</section>
+		</nav>
+	</div>
+</xp:view>

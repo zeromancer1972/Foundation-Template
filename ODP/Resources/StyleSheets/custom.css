@@ -1,0 +1,108 @@
+/* foundation tweaks */
+	/* for some reason links are hovered-underlined, so kill them */
+a:link {
+	text-decoration: none;
+}
+
+/* don't waste space */
+.row {
+	max-width: 100%;
+}
+
+/* dojo tundra tweaks */
+.tundra .dijitDialog {
+	border-color: #006993;
+}
+
+/* adapt the look to the oneuiv2.1 dialog title bar */
+.tundra .dijitDialogTitleBar {
+	padding: 14px;
+	background: none #006993;
+	color: #fff;
+}
+
+/* just for the case you use oneui styles... */
+.lotusForm {
+	background-color: #fff;
+}
+
+/* foundation custom styles */
+.top-bar {
+	background-color: #006993;
+}
+
+/* needed to get a better look for view panels and pagers */
+.header-separator {
+	padding-top: 45px;
+}
+
+table tr.even,table tr.alt,table tr:nth-of-type(even) {
+	background: inherit;
+}
+
+table tr th,table tr td {
+	padding: inherit;
+}
+
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td
+	{
+	padding: inherit;
+}
+
+/* add this to any foundation button within your form */
+.button-spacer {
+	margin-right: 1px;
+}
+
+/* causes forms to look better */
+.row {
+	margin-bottom: 4px;
+}
+
+/* other */
+.top10 {
+	padding-top: 10px;
+}
+
+/* for forms ok, but for view panels and pagers we had to deactivate them before */
+table.form {
+	border: solid 1px #e8e8e9;
+}
+
+table.form tr th,table.form tr td {
+	background-color: #f9f9f9;
+	padding: 0.5625rem 0.625rem;
+}
+
+/* form labels look more convenient */
+table.form label {
+	color: #aaa;
+	font-weight: normal;
+	font-size: 0.6875rem;
+}
+
+/* form data in read mode should be emphasized */
+table.form span {
+	font-weight: bold;
+}
+
+/* XSP tweaks - defaults look so ugly with foundation */
+.xspDataTable {
+	margin: 0 !important;
+}
+
+/* view panels and pagers - header pager only */
+.xspDataTableViewPanelHeaderStart,.xspDataTableViewPanelHeaderEnd,.xspDataTableViewPanelFooterMiddle,.xspDataTableViewPanelFooterStart,.xspDataTableViewPanelFooterEnd
+	{
+	display: none;
+}
+
+table,.xspDataTableViewPanelHeaderMiddle {
+	border: inherit;
+	background: none;
+}
+
+/* small pager text */
+.xspDataTableViewPanelHeaderMiddle td {
+	font-size: 0.6875rem;
+}

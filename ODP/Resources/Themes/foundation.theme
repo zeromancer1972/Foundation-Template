@@ -1,0 +1,44 @@
+
+	<!--
+		The default theme contents use theme inheritance. Application themes
+		can extend an existing global theme using the extends attribute.
+		Existing themes include the following options: 1. webstandard 2. oneui
+		3. notes
+	-->
+<theme extends="oneuiv2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+	<resource>
+		<content-type>text/css</content-type>
+		<href>foundation/css/foundation.min.css</href>
+	</resource>
+	<resource>
+		<content-type>text/css</content-type>
+		<href>foundation/css/normalize.css</href>
+	</resource>
+	<resource>
+		<content-type>text/css</content-type>
+		<href>custom.css</href>
+	</resource>
+
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>foundation/js/vendor/jquery.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>foundation/js/vendor/custom.modernizr.js</href>
+	</resource>
+
+	<control override="false">
+		<!-- set a default page name unless you define it in the page itself -->
+		<name>ViewRoot</name>
+		<property>
+			<name>pageTitle</name>
+			<value>#{javascript:@DbTitle()}</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>antialised xspView tundra</value>
+		</property>
+	</control>
+</theme>
